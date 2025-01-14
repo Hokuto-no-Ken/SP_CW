@@ -72,7 +72,7 @@ void comandLineParser(int argc, char* argv[], unsigned int* mode, char(*paramete
 	// default input file name, if not entered manually
 	if (parameters[INPUT_FILENAME_PARAMETER][0] == '\0') {
 		strcpy(parameters[INPUT_FILENAME_PARAMETER], DEFAULT_INPUT_FILENAME);
-		printf("Input file name not setted. Used default input file name \"file1.cwl\"\r\n\r\n");
+		printf("Input file name not setted. Used default input file name \"file1.z10\"\r\n\r\n");
 	}
 
 	// default mode, if not entered manually

@@ -105,67 +105,67 @@ static void intitTokenStruct__OLD() {
 	tokenStruct[MULTI_TOKEN_BITWISE_NOT][0] = (char*)"~";
 	tokenStruct[MULTI_TOKEN_BITWISE_AND][0] = (char*)"&";
 	tokenStruct[MULTI_TOKEN_BITWISE_OR][0] = (char*)"|";
-	tokenStruct[MULTI_TOKEN_NOT][0] = (char*)"NOT";
-	tokenStruct[MULTI_TOKEN_AND][0] = (char*)"AND";
-	tokenStruct[MULTI_TOKEN_OR][0] = (char*)"OR";
+	tokenStruct[MULTI_TOKEN_NOT][0] = (char*)"not";
+	tokenStruct[MULTI_TOKEN_AND][0] = (char*)"and";
+	tokenStruct[MULTI_TOKEN_OR][0] = (char*)"or";
 
-	tokenStruct[MULTI_TOKEN_EQUAL][0] = (char*)"==";
-	tokenStruct[MULTI_TOKEN_NOT_EQUAL][0] = (char*)"!=";
+	tokenStruct[MULTI_TOKEN_EQUAL][0] = (char*)"=";
+	tokenStruct[MULTI_TOKEN_NOT_EQUAL][0] = (char*)"<>";
 	tokenStruct[MULTI_TOKEN_LESS][0] = (char*)"<";
 	tokenStruct[MULTI_TOKEN_GREATER][0] = (char*)">";
-	tokenStruct[MULTI_TOKEN_LESS_OR_EQUAL][0] = (char*)"<=";
-	tokenStruct[MULTI_TOKEN_GREATER_OR_EQUAL][0] = (char*)">=";
+	tokenStruct[MULTI_TOKEN_LESS_OR_EQUAL][0] = (char*)"<";
+	tokenStruct[MULTI_TOKEN_GREATER_OR_EQUAL][0] = (char*)">";
 
-	tokenStruct[MULTI_TOKEN_ADD][0] = (char*)"+";
-	tokenStruct[MULTI_TOKEN_SUB][0] = (char*)"-";
+	tokenStruct[MULTI_TOKEN_ADD][0] = (char*)"add";
+	tokenStruct[MULTI_TOKEN_SUB][0] = (char*)"sub";
 	tokenStruct[MULTI_TOKEN_MUL][0] = (char*)"*";
-	tokenStruct[MULTI_TOKEN_DIV][0] = (char*)"DIV";
-	tokenStruct[MULTI_TOKEN_MOD][0] = (char*)"MOD";
+	tokenStruct[MULTI_TOKEN_DIV][0] = (char*)"/";
+	tokenStruct[MULTI_TOKEN_MOD][0] = (char*)"%";
 
-	tokenStruct[MULTI_TOKEN_BIND_RIGHT_TO_LEFT][0] = (char*)"<<";
+	tokenStruct[MULTI_TOKEN_BIND_RIGHT_TO_LEFT][0] = (char*)"<-";
 	tokenStruct[MULTI_TOKEN_BIND_LEFT_TO_RIGHT][0] = (char*)">>";
 
 	tokenStruct[MULTI_TOKEN_COLON][0] = (char*)":";
-	tokenStruct[MULTI_TOKEN_GOTO][0] = (char*)"GOTO";
+	tokenStruct[MULTI_TOKEN_GOTO][0] = (char*)"goto";
 
-	tokenStruct[MULTI_TOKEN_IF][0] = (char*)"IF"; tokenStruct[MULTI_TOKEN_IF][1] = (char*)"(";
-	//	tokenStruct[MULTI_TOKEN_IF_][0] = (char*)"IF"; // don't change this!
+	tokenStruct[MULTI_TOKEN_IF][0] = (char*)"if"; tokenStruct[MULTI_TOKEN_IF][1] = (char*)"(";
+	//	tokenStruct[MULTI_TOKEN_IF_][0] = (char*)"if"; // don't change this!
 	tokenStruct[MULTI_TOKEN_THEN][0] = (char*)")";
 	//	tokenStruct[MULTI_TOKEN_THEN_][0] = (char*)"NULL"; tokenStruct[MULTI_TOKEN_IF][1] = (char*)"STATEMENT"; // don't change this!
-	tokenStruct[MULTI_TOKEN_ELSE][0] = (char*)"ELSE";
+	tokenStruct[MULTI_TOKEN_ELSE][0] = (char*)"else";
 
 
-	tokenStruct[MULTI_TOKEN_FOR][0] = (char*)"FOR";
-	tokenStruct[MULTI_TOKEN_TO][0] = (char*)"TO";
-	tokenStruct[MULTI_TOKEN_DOWNTO][0] = (char*)"DOWNTO";
-	tokenStruct[MULTI_TOKEN_DO][0] = (char*)"DO"; // tokenStruct[MULTI_TOKEN_DO][1] = (char*)":";
-
-	//
-	tokenStruct[MULTI_TOKEN_WHILE][0] = (char*)"WHILE";
-	tokenStruct[MULTI_TOKEN_CONTINUE_WHILE][0] = (char*)"CONTINUE"; tokenStruct[MULTI_TOKEN_CONTINUE_WHILE][1] = (char*)"WHILE";
-	tokenStruct[MULTI_TOKEN_EXIT_WHILE][0] = (char*)"EXIT"; tokenStruct[MULTI_TOKEN_EXIT_WHILE][1] = (char*)"WHILE";
-	tokenStruct[MULTI_TOKEN_END_WHILE][0] = (char*)"END"; tokenStruct[MULTI_TOKEN_END_WHILE][1] = (char*)"WHILE";
-	//
+	tokenStruct[MULTI_TOKEN_FOR][0] = (char*)"for";
+	tokenStruct[MULTI_TOKEN_TO][0] = (char*)"to";
+	tokenStruct[MULTI_TOKEN_DOWNTO][0] = (char*)"downto";
+	tokenStruct[MULTI_TOKEN_DO][0] = (char*)"do"; // tokenStruct[MULTI_TOKEN_DO][1] = (char*)":";
 
 	//
-	tokenStruct[MULTI_TOKEN_REPEAT][0] = (char*)"REPEAT";
-	tokenStruct[MULTI_TOKEN_UNTIL][0] = (char*)"UNTIL";
+	tokenStruct[MULTI_TOKEN_WHILE][0] = (char*)"while";
+	tokenStruct[MULTI_TOKEN_CONTINUE_WHILE][0] = (char*)"continue"; tokenStruct[MULTI_TOKEN_CONTINUE_WHILE][1] = (char*)"while";
+	tokenStruct[MULTI_TOKEN_EXIT_WHILE][0] = (char*)"exit"; tokenStruct[MULTI_TOKEN_EXIT_WHILE][1] = (char*)"while";
+	tokenStruct[MULTI_TOKEN_END_WHILE][0] = (char*)"finish"; tokenStruct[MULTI_TOKEN_END_WHILE][1] = (char*)"while";
 	//
 
 	//
-	tokenStruct[MULTI_TOKEN_INPUT][0] = (char*)"GET";
-	tokenStruct[MULTI_TOKEN_OUTPUT][0] = (char*)"PUT";
+	tokenStruct[MULTI_TOKEN_REPEAT][0] = (char*)"repeat";
+	tokenStruct[MULTI_TOKEN_UNTIL][0] = (char*)"until";
 	//
 
 	//
-	tokenStruct[MULTI_TOKEN_RLBIND][0] = (char*)"<<";
+	tokenStruct[MULTI_TOKEN_INPUT][0] = (char*)"scan";
+	tokenStruct[MULTI_TOKEN_OUTPUT][0] = (char*)"print";
+	//
+
+	//
+	tokenStruct[MULTI_TOKEN_RLBIND][0] = (char*)"<-";
 	tokenStruct[MULTI_TOKEN_LRBIND][0] = (char*)">>";
 	//
 
 	tokenStruct[MULTI_TOKEN_SEMICOLON][0] = (char*)";";
 
 	tokenStruct[MULTI_TOKEN_BEGIN][0] = (char*)"BEGIN";
-	tokenStruct[MULTI_TOKEN_END][0] = (char*)"END";
+	tokenStruct[MULTI_TOKEN_END][0] = (char*)"finish";
 
 	tokenStruct[MULTI_TOKEN_NULL_STATEMENT][0] = (char*)"NULL"; tokenStruct[MULTI_TOKEN_NULL_STATEMENT][1] = (char*)"STATEMENT";
 	//	NULL_STATEMENT null_statement
@@ -563,7 +563,7 @@ unsigned char* makeInitCode(struct LexemInfo** lastLexemInfoInTable, unsigned ch
 
 unsigned char* initMake(struct LexemInfo** lastLexemInfoInTable, unsigned char* currBytePtr) {
 	return currBytePtr;
-//	for (; (*lastLexemInfoInTable)->lexemStr[0] && strncmp((*lastLexemInfoInTable)->lexemStr, "BODY", MAX_LEXEM_SIZE); ++ * lastLexemInfoInTable);
+//	for (; (*lastLexemInfoInTable)->lexemStr[0] && strncmp((*lastLexemInfoInTable)->lexemStr, "start", MAX_LEXEM_SIZE); ++ * lastLexemInfoInTable);
 //	for (; (*lastLexemInfoInTable)->lexemStr[0] && strncmp((*lastLexemInfoInTable)->lexemStr, ";", MAX_LEXEM_SIZE); ++ * lastLexemInfoInTable);
 //	return currBytePtr;
 }

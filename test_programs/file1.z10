@@ -1,0 +1,10 @@
+program pPROGM ;
+start var integer16 aVVVVV , bVVVVV , xVVVVV ;
+  scan (aVVVVV)
+  scan (bVVVVV) 
+  xVVVVV <- 10 *  (aVVVVV sub bVVVVV) add (aVVVVV add bVVVVV) / 10
+ print ( xVVVVV )
+  scan (aVVVVV)
+finish
+
+

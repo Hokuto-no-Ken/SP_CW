@@ -218,7 +218,8 @@ unsigned int getKeyWordId(char* keywords_, char* lexemStr, unsigned int baseId) 
 // try to get KeyWord
 char tryToGetKeyWord(struct LexemInfo* lexemInfoInTable) {
 	char keywords_re[] = KEYWORDS_RE;
-	//char keywords_re[] = ";|<<|>>|\\+|-|\\*|,|==|!=|:|\\(|\\)|NAME|DATA|BODY|END|EXIT|CONTINUE|GET|PUT|IF|ELSE|FOR|TO|DOWNTO|DO|WHILE|REPEAT|UNTIL|GOTO|DIV|MOD|<=|>=|NOT|AND|OR|INTEGER16";
+	//char keywords_re[] = ";|<<|>>|\\+|-|\\*|,|==|!=|:|\\(|\\)|NAME|
+	// |BODY|END|EXIT|CONTINUE|GET|PUT|IF|ELSE|FOR|TO|DOWNTO|DO|WHILE|REPEAT|UNTIL|GOTO|DIV|MOD|<=|>=|NOT|AND|OR|INTEGER16";
 	//char keywords_re[] = ";|<<|\\+\\+|--|\\*\\*|==|\\(|\\)|!=|:|name|data|body|end|get|put|for|to|downto|do|while|continue|exit|repeat|until|if|goto|div|mod|le|ge|not|and|or|long|int";
 	char keywords_[sizeof(keywords_re)] = { '\0' };
 	prepareKeyWordIdGetter(keywords_, keywords_re);

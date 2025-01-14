@@ -58,7 +58,7 @@ int checkingInternalCollisionInDeclarations(/*TODO: add arg*/) {
 				isLabel = 1;
 				isDeclaredLabel = 1;
 			}
-			if (lexemIndex && !strncmp(lexemesInfoTable[lexemIndex - 1].lexemStr, "GOTO", MAX_LEXEM_SIZE)) {
+			if (lexemIndex && !strncmp(lexemesInfoTable[lexemIndex - 1].lexemStr, "goto", MAX_LEXEM_SIZE)) {
 				isLabel = 1;
 			}
 		}

@@ -21,7 +21,7 @@
 
 #include "src/include/cli/cli.h"
 bool reSetDefaultInputFileName_ = 
-strcpy(parameters[INPUT_FILENAME_PARAMETER], "../test_programs/file1.cwl")
+strcpy(parameters[INPUT_FILENAME_PARAMETER], "../test_programs/file1.z10")
 != NULL;
 #include "src/include/lexica/lexica.h"
 
@@ -70,7 +70,7 @@ int main(int argc, char* argv[]) {
 		printf("-------------------------------------------------------------------\r\n\r\n");
 	}
 
-	int commentRemoverResult = commentRemover(text, "#*", "*#");
+	int commentRemoverResult = commentRemover(text, "!!", "\n");
 	if (commentRemoverResult) {
 		printf("Comment remover return %d\r\n", commentRemoverResult);
 		printf("Press Enter to exit . . .");

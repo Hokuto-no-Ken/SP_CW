@@ -7,10 +7,10 @@
 
 #define DEFAULT_MODE (LEXICAL_ANALISIS_MODE | DEBUG_MODE)
 
-
-#define TOKENS_RE         ";|<<|>>|\\+|-|\\*|,|==|!=|:|\\(|\\)|<=|>=|[_0-9A-Za-z]+|[^ \t\r\f\v\n]"
-#define KEYWORDS_RE       ";|<<|>>|\\+|-|\\*|,|==|!=|:|\\(|\\)|NAME|DATA|BODY|END|EXIT|CONTINUE|GET|PUT|IF|ELSE|FOR|TO|DOWNTO|DO|WHILE|REPEAT|UNTIL|GOTO|DIV|MOD|<=|>=|NOT|AND|OR|INTEGER16"
-#define IDENTIFIERS_RE    "_[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]"
+// coca cola
+#define TOKENS_RE         ";|<-|>>|\\+|-|\\*|,|=|<>|:|\\(|\\)|<=|>=|[_0-9A-Za-z]+|[^ \t\r\f\v\n]"
+#define KEYWORDS_RE       ";|<-|>>|\\+|-|\\*|,|=|<>|:|\\(|\\)|program|var|start|finish|exit|continue|print|scan|if|else|for|to|downto|do|while|repeat|until|goto|\\/|\\%|<|>|not|and|or|integer16|add|sub"
+#define IDENTIFIERS_RE    "[a-z][A-Z][A-Z][A-Z][A-Z][A-Z]"
 #define UNSIGNEDVALUES_RE "0|[1-9][0-9]*"
 
 
@@ -30,19 +30,19 @@
 {"program", 2, {"program____part1","program____part2"}}, 
 
 
-#define T_NAME_0 "NAME"
+#define T_NAME_0 "program"
 #define T_NAME_1 ""
 #define T_NAME_2 ""
 #define T_NAME_3 ""
-#define T_BODY_0 "BODY"
+#define T_BODY_0 "start"
 #define T_BODY_1 ""
 #define T_BODY_2 ""
 #define T_BODY_3 ""
-#define T_DATA_0 "DATA"
+#define T_DATA_0 "var"
 #define T_DATA_1 ""
 #define T_DATA_2 ""
 #define T_DATA_3 ""
-#define T_DATA_TYPE_0 "INTEGER16"
+#define T_DATA_TYPE_0 "integer16"
 #define T_DATA_TYPE_1 ""
 #define T_DATA_TYPE_2 ""
 #define T_DATA_TYPE_3 ""
@@ -59,24 +59,24 @@
 #define T_BITWISE_OR_1 ""
 #define T_BITWISE_OR_2 ""
 #define T_BITWISE_OR_3 ""
-#define T_NOT_0 "NOT"
+#define T_NOT_0 "not"
 #define T_NOT_1 ""
 #define T_NOT_2 ""
 #define T_NOT_3 ""
-#define T_AND_0 "AND"
+#define T_AND_0 "and"
 #define T_AND_1 ""
 #define T_AND_2 ""
 #define T_AND_3 ""
-#define T_OR_0 "OR"
+#define T_OR_0 "or"
 #define T_OR_1 ""
 #define T_OR_2 ""
 #define T_OR_3 ""
 //
-#define T_EQUAL_0 "=="
+#define T_EQUAL_0 "="
 #define T_EQUAL_1 ""
 #define T_EQUAL_2 ""
 #define T_EQUAL_3 ""
-#define T_NOT_EQUAL_0 "!="
+#define T_NOT_EQUAL_0 "<>"
 #define T_NOT_EQUAL_1 ""
 #define T_NOT_EQUAL_2 ""
 #define T_NOT_EQUAL_3 ""
@@ -88,20 +88,20 @@
 #define T_GREATER_1 ""
 #define T_GREATER_2 ""
 #define T_GREATER_3 ""
-#define T_LESS_OR_EQUAL_0 "<="
+#define T_LESS_OR_EQUAL_0 "<"
 #define T_LESS_OR_EQUAL_1 ""
 #define T_LESS_OR_EQUAL_2 ""
 #define T_LESS_OR_EQUAL_3 ""
-#define T_GREATER_OR_EQUAL_0 ">="
+#define T_GREATER_OR_EQUAL_0 ">"
 #define T_GREATER_OR_EQUAL_1 ""
 #define T_GREATER_OR_EQUAL_2 ""
 #define T_GREATER_OR_EQUAL_3 ""
 //
-#define T_ADD_0 "+"
+#define T_ADD_0 "add"
 #define T_ADD_1 ""
 #define T_ADD_2 ""
 #define T_ADD_3 ""
-#define T_SUB_0 "-"
+#define T_SUB_0 "sub"
 #define T_SUB_1 ""
 #define T_SUB_2 ""
 #define T_SUB_3 ""
@@ -109,16 +109,16 @@
 #define T_MUL_1 ""
 #define T_MUL_2 ""
 #define T_MUL_3 ""
-#define T_DIV_0 "DIV"
+#define T_DIV_0 "/"
 #define T_DIV_1 ""
 #define T_DIV_2 ""
 #define T_DIV_3 ""
-#define T_MOD_0 "MOD"
+#define T_MOD_0 "%"
 #define T_MOD_1 ""
 #define T_MOD_2 ""
 #define T_MOD_3 ""
 //
-#define T_BIND_RIGHT_TO_LEFT_0 "<<"
+#define T_BIND_RIGHT_TO_LEFT_0 "<-"
 #define T_BIND_RIGHT_TO_LEFT_1 ""
 #define T_BIND_RIGHT_TO_LEFT_2 ""
 #define T_BIND_RIGHT_TO_LEFT_3 ""
@@ -135,12 +135,12 @@
 #define T_COLON_1 ""
 #define T_COLON_2 ""
 #define T_COLON_3 ""
-#define T_GOTO_0 "GOTO"
+#define T_GOTO_0 "goto"
 #define T_GOTO_1 ""
 #define T_GOTO_2 ""
 #define T_GOTO_3 ""
 //
-#define T_IF_0 "IF"
+#define T_IF_0 "if"
 #define T_IF_1 "("
 #define T_IF_2 ""
 #define T_IF_3 ""
@@ -148,64 +148,64 @@
 #define T_THEN_1 ""
 #define T_THEN_2 ""
 #define T_THEN_3 ""
-#define T_ELSE_0 "ELSE"
+#define T_ELSE_0 "else"
 #define T_ELSE_1 ""
 #define T_ELSE_2 ""
 #define T_ELSE_3 ""
 //
-#define T_FOR_0 "FOR"
+#define T_FOR_0 "for"
 #define T_FOR_1 ""
 #define T_FOR_2 ""
 #define T_FOR_3 ""
-#define T_TO_0 "TO"
+#define T_TO_0 "to"
 #define T_TO_1 ""
 #define T_TO_2 ""
 #define T_TO_3 ""
-#define T_DOWNTO_0 "DOWNTO"
+#define T_DOWNTO_0 "downto"
 #define T_DOWNTO_1 ""
 #define T_DOWNTO_2 ""
 #define T_DOWNTO_3 ""
-#define T_DO_0 "DO"
+#define T_DO_0 "do"
 #define T_DO_1 ""
 #define T_DO_2 ""
 #define T_DO_3 ""
 //
-#define T_WHILE_0 "WHILE"
+#define T_WHILE_0 "while"
 #define T_WHILE_1 ""
 #define T_WHILE_2 ""
 #define T_WHILE_3 ""
-#define T_CONTINUE_WHILE_0 "CONTINUE"
-#define T_CONTINUE_WHILE_1 "WHILE"
+#define T_CONTINUE_WHILE_0 "continue"
+#define T_CONTINUE_WHILE_1 "while"
 #define T_CONTINUE_WHILE_2 ""
 #define T_CONTINUE_WHILE_3 ""
-#define T_EXIT_WHILE_0 "EXIT"
-#define T_EXIT_WHILE_1 "WHILE" 
+#define T_EXIT_WHILE_0 "exit"
+#define T_EXIT_WHILE_1 "while" 
 #define T_EXIT_WHILE_2 "" 
 #define T_EXIT_WHILE_3 ""
-#define T_END_WHILE_0 "END"
-#define T_END_WHILE_1 "WHILE"
+#define T_END_WHILE_0 "finish"
+#define T_END_WHILE_1 "while"
 #define T_END_WHILE_2 ""
 #define T_END_WHILE_3 ""
 //
-#define T_REPEAT_0 "REPEAT"
+#define T_REPEAT_0 "repeat"
 #define T_REPEAT_1 ""
 #define T_REPEAT_2 ""
 #define T_REPEAT_3 ""
-#define T_UNTIL_0 "UNTIL"
+#define T_UNTIL_0 "until"
 #define T_UNTIL_1 ""
 #define T_UNTIL_2 ""
 #define T_UNTIL_3 ""
 //
-#define T_INPUT_0 "GET"
+#define T_INPUT_0 "scan"
 #define T_INPUT_1 ""
 #define T_INPUT_2 ""
 #define T_INPUT_3 ""
-#define T_OUTPUT_0 "PUT"
+#define T_OUTPUT_0 "print"
 #define T_OUTPUT_1 ""
 #define T_OUTPUT_2 ""
 #define T_OUTPUT_3 ""
 //
-#define T_RLBIND_0 "<<"
+#define T_RLBIND_0 "<-"
 #define T_RLBIND_1 ""
 #define T_RLBIND_2 ""
 #define T_RLBIND_3 ""
@@ -223,7 +223,7 @@
 #define T_BEGIN_1 ""
 #define T_BEGIN_2 ""
 #define T_BEGIN_3 ""
-#define T_END_0 "END"
+#define T_END_0 "finish"
 #define T_END_1 ""
 #define T_END_2 ""
 #define T_END_3 ""
@@ -564,7 +564,7 @@ extern char* tokenStruct[MAX_TOKEN_STRUCT_ELEMENT_COUNT][MAX_TOKEN_STRUCT_ELEMEN
     {"labeled_point", 2, {"ident", "tokenCOLON"}},\
     {"goto_label", 2, {"tokenGOTO","ident"}},\
     {"program_name", 1, {"ident_terminal"}},\
-    {"value_type", 1, {"INTEGER16"}},\
+    {"value_type", 1, {"integer16"}},\
     {"other_declaration_ident", 2, {"tokenCOMMA", "ident"}},\
     {"other_declaration_ident____iteration_after_one", 2, {"other_declaration_ident","other_declaration_ident____iteration_after_one"}},\
     {"other_declaration_ident____iteration_after_one", 2, {"tokenCOMMA", "ident"}},\
@@ -572,20 +572,20 @@ extern char* tokenStruct[MAX_TOKEN_STRUCT_ELEMENT_COUNT][MAX_TOKEN_STRUCT_ELEMEN
     {"declaration", 2, {"value_type__ident", "other_declaration_ident____iteration_after_one"}},\
     {"declaration", 2, {"value_type", "ident"}},\
 \
-    {"unary_operator", 1, {"NOT"}},\
-    {"unary_operator", 1, {"-"}},\
-    {"unary_operator", 1, {"+"}},\
-    {"binary_operator", 1, {"AND"}},\
-    {"binary_operator", 1, {"OR"}},\
-    {"binary_operator", 1, {"=="}},\
-    {"binary_operator", 1, {"!="}},\
-    {"binary_operator", 1, {"<="}},\
-    {"binary_operator", 1, {">="}},\
-    {"binary_operator", 1, {"+"}},\
-    {"binary_operator", 1, {"-"}},\
+    {"unary_operator", 1, {"not"}},\
+    {"unary_operator", 1, {"sub"}},\
+    {"unary_operator", 1, {"add"}},\
+    {"binary_operator", 1, {"and"}},\
+    {"binary_operator", 1, {"or"}},\
+    {"binary_operator", 1, {"="}},\
+    {"binary_operator", 1, {"<>"}},\
+    {"binary_operator", 1, {"<"}},\
+    {"binary_operator", 1, {">"}},\
+    {"binary_operator", 1, {"add"}},\
+    {"binary_operator", 1, {"sub"}},\
     {"binary_operator", 1, {"*"}},\
-    {"binary_operator", 1, {"DIV"}},\
-    {"binary_operator", 1, {"MOD"}},\
+    {"binary_operator", 1, {"/"}},\
+    {"binary_operator", 1, {"%"}},\
     {"binary_action", 2, {"binary_operator","expression"}},\
 \
     {"left_expression", 2, {"tokenGROUPEXPRESSIONBEGIN__expression","tokenGROUPEXPRESSIONEND"}},\
@@ -713,41 +713,41 @@ extern char* tokenStruct[MAX_TOKEN_STRUCT_ELEMENT_COUNT][MAX_TOKEN_STRUCT_ELEMEN
     {"program", 2, {"program____part1","program____part2"}},\
 \
     {"tokenCOLON", 1, {":"}},\
-    {"tokenGOTO", 1, {"GOTO"}},\
-    {"tokenINTEGER16", 1, {"INTEGER16"}},\
+    {"tokenGOTO", 1, {"goto"}},\
+    {"tokenINTEGER16", 1, {"integer16"}},\
     {"tokenCOMMA", 1, {","}},\
-    {"tokenNOT", 1, {"NOT"}},\
-    {"tokenAND", 1, {"AND"}},\
-    {"tokenOR", 1, {"OR"}},\
-    {"tokenEQUAL", 1, {"=="}},\
-    {"tokenNOTEQUAL", 1, {"!="}},\
-    {"tokenLESSOREQUAL", 1, {"<="}},\
-    {"tokenGREATEROREQUAL", 1, {">="}},\
-    {"tokenPLUS", 1, {"+"}},\
-    {"tokenMINUS", 1, {"-"}},\
+    {"tokenNOT", 1, {"not"}},\
+    {"tokenAND", 1, {"and"}},\
+    {"tokenOR", 1, {"or"}},\
+    {"tokenEQUAL", 1, {"="}},\
+    {"tokenNOTEQUAL", 1, {"<>"}},\
+    {"tokenLESSOREQUAL", 1, {"<"}},\
+    {"tokenGREATEROREQUAL", 1, {">"}},\
+    {"tokenPLUS", 1, {"add"}},\
+    {"tokenMINUS", 1, {"sub"}},\
     {"tokenMUL", 1, {"*"}},\
-    {"tokenDIV", 1, {"DIV"}},\
-    {"tokenMOD", 1, {"MOD"}},\
+    {"tokenDIV", 1, {"/"}},\
+    {"tokenMOD", 1, {"%"}},\
     {"tokenGROUPEXPRESSIONBEGIN", 1, {"("}},\
     {"tokenGROUPEXPRESSIONEND", 1, {")"}},\
-    {"tokenRLBIND", 1, {"<<"}},\
+    {"tokenRLBIND", 1, {"<-"}},\
     {"tokenLRBIND", 1, {">>"}},\
-    {"tokenELSE", 1, {"ELSE"}},\
-    {"tokenIF", 1, {"IF"}},\
-    {"tokenDO", 1, {"DO"}},\
-    {"tokenFOR", 1, {"FOR"}},\
-    {"tokenTO", 1, {"TO"}},\
-    {"tokenWHILE", 1, {"WHILE"}},\
-    {"tokenCONTINUE", 1, {"CONTINUE"}},\
-    {"tokenEXIT", 1, {"EXIT"}},\
-    {"tokenREPEAT", 1, {"REPEAT"}},\
-    {"tokenUNTIL", 1, {"UNTIL"}},\
-    {"tokenGET", 1, {"GET"}},\
-    {"tokenPUT", 1, {"PUT"}},\
-    {"tokenNAME", 1, {"NAME"}},\
-    {"tokenBODY", 1, {"BODY"}},\
-    {"tokenDATA", 1, {"DATA"}},\
-    {"tokenEND", 1, {"END"}},\
+    {"tokenELSE", 1, {"else"}},\
+    {"tokenIF", 1, {"if"}},\
+    {"tokenDO", 1, {"do"}},\
+    {"tokenFOR", 1, {"for"}},\
+    {"tokenTO", 1, {"to"}},\
+    {"tokenWHILE", 1, {"while"}},\
+    {"tokenCONTINUE", 1, {"continue"}},\
+    {"tokenEXIT", 1, {"exit"}},\
+    {"tokenREPEAT", 1, {"repeat"}},\
+    {"tokenUNTIL", 1, {"until"}},\
+    {"tokenGET", 1, {"scan"}},\
+    {"tokenPUT", 1, {"print"}},\
+    {"tokenNAME", 1, {"program"}},\
+    {"tokenBODY", 1, {"start"}},\
+    {"tokenDATA", 1, {"var"}},\
+    {"tokenEND", 1, {"finish"}},\
     {"tokenSEMICOLON", 1, {";"}},\
 \
     {"value", 1, {"value_terminal"}},\

@@ -233,7 +233,7 @@ Grammar originalGrammar = {
         {"labeled_point", 2, {"ident", "tokenCOLON"}}, // !!!!!
         {"goto_label", 2, {"tokenGOTO","ident"}},      // !!!!!
         {"program_name", 1, {"ident_terminal"}},
-        {"value_type", 1, {"INTEGER16"}},
+        {"value_type", 1, {"integer16"}},
         {"other_declaration_ident", 2, {"tokenCOMMA", "ident"}},
         {"other_declaration_ident____iteration_after_one", 2, {"other_declaration_ident","other_declaration_ident____iteration_after_one", }},
         {"other_declaration_ident____iteration_after_one", 2, {"tokenCOMMA", "ident"}},
@@ -241,20 +241,20 @@ Grammar originalGrammar = {
         {"declaration", 2, {"value_type__ident", "other_declaration_ident____iteration_after_one"}},
         {"declaration", 2, {"value_type", "ident"}},
         //
-        {"unary_operator", 1, {"NOT"}},
-        {"unary_operator", 1, {"-"}},
-        {"unary_operator", 1, {"+"}},
-        {"binary_operator", 1, {"AND"}},
-        {"binary_operator", 1, {"OR"}},
-        {"binary_operator", 1, {"=="}},
-        {"binary_operator", 1, {"!="}},
-        {"binary_operator", 1, {"<="}},
-        {"binary_operator", 1, {">="}},
-        {"binary_operator", 1, {"+"}},
-        {"binary_operator", 1, {"-"}},
+        {"unary_operator", 1, {"not"}},
+        {"unary_operator", 1, {"sub"}},
+        {"unary_operator", 1, {"add"}},
+        {"binary_operator", 1, {"and"}},
+        {"binary_operator", 1, {"or"}},
+        {"binary_operator", 1, {"="}},
+        {"binary_operator", 1, {"<>"}},
+        {"binary_operator", 1, {"<"}},
+        {"binary_operator", 1, {">"}},
+        {"binary_operator", 1, {"add"}},
+        {"binary_operator", 1, {"sub"}},
         {"binary_operator", 1, {"*"}},
-        {"binary_operator", 1, {"DIV"}},
-        {"binary_operator", 1, {"MOD"}},
+        {"binary_operator", 1, {"/"}},
+        {"binary_operator", 1, {"%"}},
         {"binary_action", 2, {"binary_operator","expression"}},
         //
         {"left_expression", 2, {"tokenGROUPEXPRESSIONBEGIN__expression","tokenGROUPEXPRESSIONEND"}},
@@ -382,41 +382,41 @@ Grammar originalGrammar = {
         {"program", 2, {"program____part1","program____part2"}},
         //
         {"tokenCOLON", 1, {":"}},
-        {"tokenGOTO", 1, {"GOTO"}},
-        {"tokenINTEGER16", 1, {"INTEGER16"}},
+        {"tokenGOTO", 1, {"goto"}},
+        {"tokenINTEGER16", 1, {"integer16"}},
         {"tokenCOMMA", 1, {","}},
-        {"tokenNOT", 1, {"NOT"}},
-        {"tokenAND", 1, {"AND"}},
-        {"tokenOR", 1, {"OR"}},
-        {"tokenEQUAL", 1, {"=="}},
-        {"tokenNOTEQUAL", 1, {"!="}},
-        {"tokenLESSOREQUAL", 1, {"<="}},
-        {"tokenGREATEROREQUAL", 1, {">="}},
-        {"tokenPLUS", 1, {"+"}},
-        {"tokenMINUS", 1, {"-"}},
+        {"tokenNOT", 1, {"not"}},
+        {"tokenAND", 1, {"and"}},
+        {"tokenOR", 1, {"or"}},
+        {"tokenEQUAL", 1, {"="}},
+        {"tokenNOTEQUAL", 1, {"<>"}},
+        {"tokenLESSOREQUAL", 1, {"<"}},
+        {"tokenGREATEROREQUAL", 1, {">"}},
+        {"tokenPLUS", 1, {"add"}},
+        {"tokenMINUS", 1, {"sub"}},
         {"tokenMUL", 1, {"*"}},
-        {"tokenDIV", 1, {"DIV"}},
-        {"tokenMOD", 1, {"MOD"}},
+        {"tokenDIV", 1, {"/"}},
+        {"tokenMOD", 1, {"%"}},
         {"tokenGROUPEXPRESSIONBEGIN", 1, {"("}},
         {"tokenGROUPEXPRESSIONEND", 1, {")"}},
-        {"tokenRLBIND", 1, {"<<"}},
+        {"tokenRLBIND", 1, {"<-"}},
         {"tokenLRBIND", 1, {">>"}},
-        {"tokenELSE", 1, {"ELSE"}},
-        {"tokenIF", 1, {"IF"}},
-        {"tokenDO", 1, {"DO"}},
-        {"tokenFOR", 1, {"FOR"}},
-        {"tokenTO", 1, {"TO"}},
-        {"tokenWHILE", 1, {"WHILE"}},
-        {"tokenCONTINUE", 1, {"CONTINUE"}},
-        {"tokenEXIT", 1, {"EXIT"}},
-        {"tokenREPEAT", 1, {"REPEAT"}},
-        {"tokenUNTIL", 1, {"UNTIL"}},
-        {"tokenGET", 1, {"GET"}},
-        {"tokenPUT", 1, {"PUT"}},
-        {"tokenNAME", 1, {"NAME"}},
-        {"tokenBODY", 1, {"BODY"}},
-        {"tokenDATA", 1, {"DATA"}},
-        {"tokenEND", 1, {"END"}},
+        {"tokenELSE", 1, {"else"}},
+        {"tokenIF", 1, {"if"}},
+        {"tokenDO", 1, {"do"}},
+        {"tokenFOR", 1, {"for"}},
+        {"tokenTO", 1, {"to"}},
+        {"tokenWHILE", 1, {"while"}},
+        {"tokenCONTINUE", 1, {"continue"}},
+        {"tokenEXIT", 1, {"exit"}},
+        {"tokenREPEAT", 1, {"repeat"}},
+        {"tokenUNTIL", 1, {"until"}},
+        {"tokenGET", 1, {"scan"}},
+        {"tokenPUT", 1, {"print"}},
+        {"tokenNAME", 1, {"program"}},
+        {"tokenBODY", 1, {"start"}},
+        {"tokenDATA", 1, {"var"}},
+        {"tokenEND", 1, {"finish"}},
         {"tokenSEMICOLON", 1, {";"}},
         //
         { "value", 1, {"value_terminal"} },
@@ -590,7 +590,7 @@ void displayParseInfoTable(const map<int, map<int, set<string>>>& parseInfoTable
                 cout << setw(CELL_WIDTH) << cellContent;
             }
             else {
-                cout << setw(CELL_WIDTH) << "-";
+                cout << setw(CELL_WIDTH) << "sub";
             }
         }
         cout << endl;
@@ -634,7 +634,7 @@ void saveParseInfoTableToFile(const map<int, map<int, set<string>>>& parseInfoTa
                 file << setw(CELL_WIDTH) << cellContent;
             }
             else {
-                file << setw(CELL_WIDTH) << "-";
+                file << setw(CELL_WIDTH) << "sub";
             }
         }
         file << endl;

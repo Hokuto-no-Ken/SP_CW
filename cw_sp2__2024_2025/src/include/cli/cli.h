@@ -17,7 +17,7 @@
 //#include "stdlib.h"
 //#include "string.h"
 
-#define DEFAULT_INPUT_FILENAME "file44.cwl" // TODO: move!
+#define DEFAULT_INPUT_FILENAME "file44.z10" // TODO: move!
 
 #define PREDEFINED_TEXT \
 	"name MN\r\n" \
