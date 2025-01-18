@@ -128,8 +128,11 @@ int main(int argc, char* argv[]) {
 	//printf("\r\n;CODE:\r\n");
 	//viewCode(outCode, 160/*GENERATED_TEXT_SIZE*/, 16);
 	//printf("\r\n;ENDCODE;\r\n");
-
-	write_image_to_file("out.exe", new_code, imageSize);
+	//  fanta
+	char* exeName = (char*) malloc(200);
+	printf("Please enter a  file name for creating exe \n");
+	scanf("%s", exeName);
+	write_image_to_file(strcat(exeName, ".exe"), new_code, imageSize);
 
 	printf("Press Enter to exit . . .");
 	(void)getchar();
