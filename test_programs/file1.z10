@@ -1,11 +1,131 @@
-program pPROGM ;
-start var integer16 aVVVVV , bVVVVV , xVVVVV ;
-  scan (aVVVVV)
-  scan (bVVVVV) 
+!! program pPROGM ;
+!!  start var integer16 aVVVVV , bVVVVV , xVVVVV ;
+ !! scan (aVVVVV)
+ !! scan (bVVVVV) 
   !!afadfadf
-  xVVVVV <- 10 *  (aVVVVV sub bVVVVV) add (aVVVVV add bVVVVV) / 10
- print ( xVVVVV )
-  scan (aVVVVV)
+ !! xVVVVV <- 10 *  (aVVVVV sub bVVVVV) add (aVVVVV add bVVVVV) / 10
+ !!print ( xVVVVV )
+ !! scan (aVVVVV)
+!!finish
+
+!!      FILE 7
+!!program pPOPOP ; 
+!!start var integer16 pPPPPP, mMMMMM ;
+!!  scan ( pPPPPP )
+!! scan ( mMMMMM )
+!! while pPPPPP > 1 
+!!  pPPPPP <- pPPPPP sub 1
+!!if ( pPPPPP < mMMMMM) exit while;
+!!   print ( pPPPPP )
+!! finish while
+!!  scan(  pPPPPP )
+!! finish
+
+
+
+
+!! FILE 6
+
+!!program aASDFF ; 
+!!start var integer16 nVVVVV ;
+!!  scan ( nVVVVV )
+!!  while  nVVVVV > 1 
+!!    nVVVVV <- nVVVVV sub 1
+!!	if (nVVVVV % 2) continue while;
+  !!  print ( nVVVVV )
+ !! finish while
+!!finish
+
+
+!!   FILE 5
+
+!!program pPPPPP ;
+!!start var integer16 xXXXXX ;
+!!  scan ( xXXXXX )
+!!  repeat 
+ !!   xXXXXX <- xXXXXX sub 1
+ !!   print ( xXXXXX )
+!!  until ( xXXXXX > 1 )
+!!scan ( xXXXXX )
+!!finish
+
+
+
+
+!! FILE 4 
+
+!!program pPPPPP ; 
+!!start var integer16 xXXXXX ;
+!!  scan ( xXXXXX )
+!!  while  xXXXXX > 1 
+!!    xXXXXX <- xXXXXX sub 1
+!!    print ( xXXXXX )
+!!  finish while
+!!  scan ( xXXXXX )
+!!finish
+
+
+
+
+!!	FILE 3
+
+!!program pPPPPP ; 
+!!start var integer16 bBBBBB , dDDDDD , eEEEEE , kKKKKK ;
+!!  kKKKKK <- 25630
+!!  scan ( bBBBBB )
+!!  scan ( dDDDDD )
+ !! scan ( eEEEEE )
+!!  print ( kKKKKK add bBBBBB sub dDDDDD / 2 add eEEEEE * 4 )
+ !! scan( eEEEEE )
+!!finish
+
+
+
+
+!! FILE 2
+
+!!program pPPPPP ; 
+!!start var integer16 vVALUE , dDDDDD , rRRRRR , cCCCCC , cCCNMJ , eCCCCC ;
+!!  scan ( vVALUE )
+!!  vVALUE <- vVALUE add 1
+!!  for  cCCCCC <- 0 to 32767 do
+!!    dDDDDD <- vVALUE sub 1
+!!    for  cCCNMJ <- 0 to 32767 do 
+!!      if ( dDDDDD > 2 ) ; else goto gOTOEB ;
+!!      rRRRRR <- vVALUE
+!!      for  eCCCCC <- 0 to 32767 do
+!!        if ( rRRRRR > dDDDDD ) ; else goto gOTOCC ;
+!!        rRRRRR <- rRRRRR sub dDDDDD
+!!      ;
+!!      gOTOCC :
+!!      if ( rRRRRR = 0 ) goto gOTOEB ;
+ !!     dDDDDD <- dDDDDD sub 1
+ !!   ;
+!!    gOTOEB :
+ !!   if ( dDDDDD = 1 ) goto gOTORC ;
+ !!   vVALUE <- vVALUE add 1
+!!  ;
+!!  gOTORC :
+!!    print ( vVALUE )
+
+!!    scan( vVALUE )
+ !!finish
+
+
+
+
+ !! FILE 1
+
+ program pPPPPP ;
+start var integer16 vVVVVV , rRRRRR , cCCCCC ;
+  scan (vVVVVV)
+  rRRRRR <- 1
+  for  cCCCCC <- 0 to 32767 do
+    if ( vVVVVV <> 0 ) ; else goto eEEEEE ;
+     rRRRRR <- rRRRRR * vVVVVV
+     vVVVVV <- vVVVVV sub 1
+  ;
+  eEEEEE :
+  print ( rRRRRR )
+  scan( rRRRRR )
 finish
-
-
